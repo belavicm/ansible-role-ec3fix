@@ -12,7 +12,7 @@
   lineinfile:
     path: /etc/ec3-cloud-users/config.conf
     regexp: '^homeprefix = '
-    line: project = {{homeprefix}}
+    line: homeprefix = {{homeprefix}}
 
 - name: Change ec3-cloud-users ip
   lineinfile:
