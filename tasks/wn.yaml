@@ -1,0 +1,24 @@
+---
+- name: Change ec3-cloud-users sendemail
+  lineinfile:
+    path: /etc/ec3-cloud-users/config.conf
+    regexp: '^sendemail ='
+    line: sendemail = {{sendemail}}
+
+- name: Change ec3-cloud-users createhome
+  lineinfile:
+    path: /etc/ec3-cloud-users/config.conf
+    regexp: '^createhome ='
+    line: createhome = False
+
+- name: Change ec3-cloud-users setpassword
+  lineinfile:
+    path: /etc/ec3-cloud-users/config.conf
+    regexp: '^setpassword ='
+    line: setpassword = False
+
+- name: Change ec3-cloud-users associatesgeproject
+  lineinfile:
+    path: /etc/ec3-cloud-users/config.conf
+    regexp: '^associatesgeproject ='
+    line: associatesgeproject = False
