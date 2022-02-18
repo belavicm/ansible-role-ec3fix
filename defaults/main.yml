@@ -1,11 +1,4 @@
 ---
 # Type of node to install: front or wn
 sge_type_of_node: front
-# Send mail from front
-sendemail: False
-# Emailsmtp
-emailsmtp: smtp3.srce.hr
-# Project name
-project: Srce-HTC
-# Home prefix
-homeprefix: /storage
+
