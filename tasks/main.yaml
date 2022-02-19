@@ -3,5 +3,5 @@
   include: "{{ansible_os_family}}.yaml"
   
 # LRMS configuration
-- name: Configuring the elastic cluster to use "{{clues_queue_system}}" LRMS
+- name: Configuring the elastic cluster to use "{{queue_system}}" LRMS
   include: "{{queue_system}}.yml"
