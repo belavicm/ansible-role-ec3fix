@@ -1,15 +1,2 @@
 ---
-- name: Add SRCE repository
-  yum_repository:
-    name: SRCE
-    description: EPEL YUM repo
-    baseurl: http://ftp.srce.hr/redhat/base/el$releasever/$basearch/
-    gpgcheck: yes
-    gpgkey: http://ftp.srce.hr/srce-redhat/RPM-GPG-KEY-SRCE
 
-- name: Install a list of packages
-  yum:
-    name:
-      - ssh-oscar
-      - ec3-cloud-users
-    state: latest
