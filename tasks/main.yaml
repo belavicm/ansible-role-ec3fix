@@ -24,10 +24,10 @@
     regexp: '^UserKnownHostsFile'
     line: UserKnownHostsFile /dev/null
   notify:
-
-- restart sshd
-  handlers:
-    - name: restart sshd
-      service: name=sshd state=restarted
+  - restart sshd
+  
+handlers:
+  - name: restart sshd
+    service: name=sshd state=restarted
 
 
