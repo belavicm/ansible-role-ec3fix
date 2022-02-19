@@ -5,3 +5,29 @@
 # LRMS configuration
 - name: Configuring the elastic cluster to use "{{queue_system}}" LRMS
   include: "{{queue_system}}.yml"
+  
+- name: Change PasswordAuthentication yes
+  lineinfile:
+    path: /etc/ssh/sshd_config
+    regexp: '^PasswordAuthentication'
+    line: PasswordAuthentication yes
+
+- name: Add StrictHostKeyChecking no
+  lineinfile:
+    path: /etc/ssh/ssh_config
+    regexp: '^PasswordAuthentication'
+    line: StrictHostKeyChecking no
+
+- name: Add UserKnownHostsFile /dev/null
+  lineinfile:
+    path: /etc/ssh/ssh_config
+    regexp: '^UserKnownHostsFile'
+    line: UserKnownHostsFile /dev/null
+  notify:
+
+- restart sshd
+  handlers:
+    - name: restart sshd
+      service: name=sshd state=restarted
+
+
