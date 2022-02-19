@@ -4,4 +4,4 @@
   
   # LRMS configuration
   - name: Configuring the elastic cluster to use "{{clues_queue_system}}" LRMS
-    include: "{{clues_queue_system}}.yml"
+    include: "{{queue_system}}.yml"
