@@ -23,11 +23,8 @@
     path: /etc/ssh/ssh_config
     regexp: '^UserKnownHostsFile'
     line: UserKnownHostsFile /dev/null
-  notify:
-  - restart sshd
   
-handlers:
-  - name: restart sshd
-    service: name=sshd state=restarted
+- name: restart sshd
+  service: name=sshd state=restarted
 
 
