@@ -2,6 +2,6 @@
 - name: Include "{{ansible_os_family}}" SGE recipe
   include: "{{ansible_os_family}}.yaml"
   
-  # LRMS configuration
-  - name: Configuring the elastic cluster to use "{{clues_queue_system}}" LRMS
-    include: "{{queue_system}}.yml"
+# LRMS configuration
+- name: Configuring the elastic cluster to use "{{clues_queue_system}}" LRMS
+  include: "{{queue_system}}.yml"
