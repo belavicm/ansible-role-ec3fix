@@ -2,5 +2,5 @@
 # Type of node to install: front or wn
 sge_type_of_node: front
 # Select LRMS
-clues_queue_system: sge
+queue_system: sge
 
