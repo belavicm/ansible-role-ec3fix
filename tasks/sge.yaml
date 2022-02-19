@@ -1,0 +1,7 @@
+---
+- name: Create clues SGE links
+  ansible.builtin.file:
+    src: /bin/clues-sge-wrapper
+    dest: /usr/local/bin/clues-sge-wrapper
+    state: link
+    force: yes
