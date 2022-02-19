@@ -4,7 +4,7 @@
   
 # LRMS configuration
 - name: Configuring the elastic cluster to use "{{queue_system}}" LRMS
-  include: "{{queue_system}}.yml"
+  include: "{{queue_system}}.yaml"
   
 - name: Change PasswordAuthentication yes
   lineinfile:
