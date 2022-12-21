@@ -1,7 +1,7 @@
 ---
 - name: Include "{{ansible_os_family}}" SGE recipe
   include: "{{ansible_os_family}}.yaml"
-  ignore_errors: true
+  when: {{ansible_os_family}} == RedHat
   
 - name: Copy 'im.conf' file to /etc/tmpfiles.d/ prevents tmp del
   copy: dest=/etc/tmpfiles.d/im.conf src=im.conf mode=0644 force=no
@@ -9,7 +9,7 @@
 # LRMS configuration
 - name: Configuring the elastic cluster to use "{{queue_system}}" LRMS
   include: "{{queue_system}}.yaml"
-  ignore_errors: true
+  when: {{queue_system}} == "sge"
   
 - name: Change PasswordAuthentication yes
   lineinfile:
