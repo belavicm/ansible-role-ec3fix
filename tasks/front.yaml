@@ -1,14 +1,14 @@
 ---
-- name: Change ec3-cloud-users sendemail
-  lineinfile:
-    path: /etc/ec3-cloud-users/config.conf
-    regexp: '^sendemail ='
-    line: sendemail = {{sendemail}}
+#- name: Change ec3-cloud-users sendemail
+#  lineinfile:
+#    path: /etc/ec3-cloud-users/config.conf
+#    regexp: '^sendemail ='
+#    line: sendemail = {{sendemail}}
 
-- name: Change ec3-cloud-users emailsmtp
-  lineinfile:
-    path: /etc/ec3-cloud-users/config.conf
-    regexp: '^emailsmtp ='
-    line: emailsmtp = {{emailsmtp}}
+#- name: Change ec3-cloud-users emailsmtp
+#  lineinfile:
+#    path: /etc/ec3-cloud-users/config.conf
+#    regexp: '^emailsmtp ='
+#    line: emailsmtp = {{emailsmtp}}
 
 
