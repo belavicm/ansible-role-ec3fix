@@ -1,6 +1,6 @@
 ---
 # Type of node to install: front or wn
-sge_type_of_node: front
+type_of_node: front
 # Select LRMS
-queue_system: sge
+queue_system: pbs
 
